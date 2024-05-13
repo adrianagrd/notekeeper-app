@@ -1,11 +1,9 @@
 import Note from './Note';
 
-const NotesList = ({ notes }) => {
+export const NotesList = ({ notes }) => {
   return (
     <div>
-      {notes.length > 0 ? notes.map(note => <Note key={note.id} note={note} />) : <p>Empty List</p>}
+      {notes.length > 0 ? notes.map(note => <Note key={note.id} note={note} />) : <p>Empty List Notes</p>}
     </div>
   );
 };
-
-export default NotesList;

@@ -1,5 +1,5 @@
 
-const Note = ({ note }) => {
+export const Note = ({ note }) => {
   return (
     <div>
       <p>{note.content}</p>
@@ -8,5 +8,3 @@ const Note = ({ note }) => {
     </div>
   );
 };
-
-export default Note;

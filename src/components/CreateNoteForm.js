@@ -1,11 +1,9 @@
 
-const CreateNoteForm = () => {
+export const CreateNoteForm = () => {
   return (
     <form>
       {}
-      <button type="submit">Create</button>
+      <button type="submit">Create Note</button>
     </form>
   );
 };
-
-export default CreateNoteForm;
