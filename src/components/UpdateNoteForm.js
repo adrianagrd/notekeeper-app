@@ -1,9 +1,18 @@
+import notesService from "../services/notes/notesService"
+
 export const UpdateNoteForm = () => {
+
+    const handleUpdateNote = () => {
+        if (confirm(`Are you sure about deleting the note ?`)) {
+            notesService.updateNotes();
+        }
+    }
+
     return (
-      <form>
-        {}
-        <button type="submit">Update Note</button>
-      </form>
-    );
-  };
-  
+        <span>
+            <button onClick={ handleUpdateNote }>
+                <b>Update Note</b>
+            </button>
+        </span>
+    )
+}
