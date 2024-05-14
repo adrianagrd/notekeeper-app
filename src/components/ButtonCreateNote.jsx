@@ -1,17 +1,19 @@
 import notesService from "../services/notes/notesService";
 
-export const CreateNoteForm = () => {
+export const CreateNoteForm = ({ id }) => {
 
   const handleCreateNote = () => {
     if(confirm(`Are you sure about creating the note ?`)) {
-      notesService.createNote();
+      notesService.createNote(id);
     }
   }
 
   return (
-    <form>
-      {}
-      <button className="createNote" onClick={handleCreateNote}>Create Note</button>
-    </form>
+    <span>
+      <button type="submit" className="createNote" onClick={handleCreateNote}>
+          <b>Create Note</b>
+      </button>
+    </span>
+    
   );
 };

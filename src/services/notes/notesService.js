@@ -1,12 +1,16 @@
-const BASE_API_URL = 'https://notekeeper-api-bx4z.onrender.com'; 
+const {VITE_BASE_API_URL: BASE_URL} = import.meta.env;
+const resourcePath = 'notes';
+const urlToFetch = `${BASE_URL}/${resourcePath}`;
+
 
  const getAllNotes = async () => {
-  const response = await fetch(BASE_API_URL);
-  return response.json();
+  const response = await globalThis.fetch(urlToFetch);
+  const data = await response.json();
+  return data;
 };
 
  const createNotes = async (newNote) => {
-  const response = await fetch(BASE_API_URL, {
+  const response = await fetch(BASE_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -17,13 +21,13 @@ const BASE_API_URL = 'https://notekeeper-api-bx4z.onrender.com';
 };
 
  const deleteNotes = async (id) => {
-  await fetch(`${BASE_API_URL}/${id}`, {
+  await fetch(`${BASE_URL}/${id}`, {
     method: 'DELETE',
   });
 };
 
  const updateNotes = async (id, updatedNote) => {
-  const response = await fetch(`${BASE_API_URL}/${id}`, {
+  const response = await fetch(`${BASE_URL}/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',

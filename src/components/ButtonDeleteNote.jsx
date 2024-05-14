@@ -1,16 +1,16 @@
 import notesService from '../services/notes/notesService';
 
-export const DeleteNoteForm = () => {
+export const DeleteNoteForm = ({ id }) => {
 
     const handleDeleteNote = () => {
         if (confirm(`Are you sure about deleting the note ?`)) {
-          notesService.deleteNote();
+          notesService.deleteNotes(id);
         }
       }
 
     return (
         <span>
-            <button className="deleteNote" onClick={handleDeleteNote}>
+            <button type="submit" className="deleteNote" onClick={handleDeleteNote}>
                 <b>Delete Note</b>
             </button>
         </span>

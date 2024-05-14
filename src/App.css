@@ -1,43 +1,72 @@
 .notesTable {
-    margin: 0 auto;
-    width: 50%;
+    margin: 20px auto;
+    width: 60%;
+    border-collapse: collapse;
+    color: #5D432C; 
 }
 
 .headerTitle {
     text-align: center;
+    font-size: 24px;
+    color: #5D432C; 
 }
 
 .noteContainer {
     list-style-type: none;
-    padding: 0;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #5D432C;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.noteContainer:hover {
+    box-shadow: 0px 0px 15px rgba(93,67,44,0.1); 
 }
 
 .noteItem {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 0;
+    padding: 10px 0;
 }
 
-.noteContent {
-    flex-grow: 1;
-    text-align: left;
+.noteColumns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.noteColumns p {
+    width: auto;
+    margin-right: 8px;
+    color: #5D432C;
+    font-size: 16px; 
 }
 
 .noteButtons {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
 .deleteNote,
-.updateNote {
+.updateNote,
+.createNote {
     margin: 0 10px;
     width: 120px;
-    background-color: rgb(249, 148, 140);
-    cursor: pointer;
-    border: none;
-    color: white;
+    background-color: #5D432C; 
+    color: #F5F5DC; 
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 2px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
+.deleteNote:hover,
+.updateNote:hover,
+.createNote:hover {
+    background-color: #3E2B1B; 
+}
