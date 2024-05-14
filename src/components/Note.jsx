@@ -1,12 +1,17 @@
 import { DeleteNoteForm, UpdateNoteForm } from './index';
 
 export const Note = ({ note }) => {
-  
   return (
-    <div>
-      <p>{note.content}</p>
-      <UpdateNoteForm />
-      <DeleteNoteForm />
-    </div>
+    <ul className='noteContainer'>
+      <li className='noteItem'>
+        <div className='noteContent'>
+          <p>{note.content}</p>
+        </div>
+        <div className='noteButtons'>
+          <UpdateNoteForm />
+          <DeleteNoteForm />
+        </div>
+      </li>
+    </ul>
   );
 };

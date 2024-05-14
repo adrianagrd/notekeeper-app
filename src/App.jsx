@@ -1,5 +1,5 @@
 import { NotesList } from "./components";  
-import './index.css';
+import './App.css';
 
 const App = () => {
 
@@ -26,7 +26,8 @@ const App = () => {
 
 	return (
 		<table className="notesTable">
-			<h2 className="headerTitle">Notes</h2>
+			<h2 className="headerTitle">NOTES</h2>
+			<hr />
 			<NotesList notes={notes} />
 		</table>
 	);

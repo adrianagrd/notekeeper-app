@@ -11,7 +11,7 @@ export const CreateNoteForm = () => {
   return (
     <form>
       {}
-      <button onClick={handleCreateNote}>Create Note</button>
+      <button className="createNote" onClick={handleCreateNote}>Create Note</button>
     </form>
   );
 };

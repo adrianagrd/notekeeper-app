@@ -1,0 +1,43 @@
+.notesTable {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.headerTitle {
+    text-align: center;
+}
+
+.noteContainer {
+    list-style-type: none;
+    padding: 0;
+}
+
+.noteItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.noteContent {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.noteButtons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.deleteNote,
+.updateNote {
+    margin: 0 10px;
+    width: 120px;
+    background-color: rgb(249, 148, 140);
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+

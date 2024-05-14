@@ -10,7 +10,7 @@ export const DeleteNoteForm = () => {
 
     return (
         <span>
-            <button onClick={handleDeleteNote}>
+            <button className="deleteNote" onClick={handleDeleteNote}>
                 <b>Delete Note</b>
             </button>
         </span>
