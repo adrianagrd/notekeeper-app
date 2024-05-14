@@ -3,14 +3,14 @@ import notesService from "../services/notes/notesService"
 export const UpdateNoteForm = () => {
 
     const handleUpdateNote = () => {
-        if (confirm(`Are you sure about deleting the note ?`)) {
+        if (confirm(`Are you sure about updating the note ?`)) {
             notesService.updateNotes();
         }
     }
 
     return (
         <span>
-            <button onClick={ handleUpdateNote }>
+            <button onClick={ handleUpdateNote } style={{ margin: '0 10px' }}>
                 <b>Update Note</b>
             </button>
         </span>

@@ -1,11 +1,11 @@
 const BASE_API_URL = 'https://notekeeper-api-bx4z.onrender.com'; 
 
-export const getAll = async () => {
+ const getAllNotes = async () => {
   const response = await fetch(BASE_API_URL);
   return response.json();
 };
 
-export const create = async (newNote) => {
+ const createNotes = async (newNote) => {
   const response = await fetch(BASE_API_URL, {
     method: 'POST',
     headers: {
@@ -16,13 +16,13 @@ export const create = async (newNote) => {
   return response.json();
 };
 
-export const deleteNotes = async (id) => {
+ const deleteNotes = async (id) => {
   await fetch(`${BASE_API_URL}/${id}`, {
     method: 'DELETE',
   });
 };
 
-export const updateNotes = async (id, updatedNote) => {
+ const updateNotes = async (id, updatedNote) => {
   const response = await fetch(`${BASE_API_URL}/${id}`, {
     method: 'PUT',
     headers: {
@@ -32,3 +32,10 @@ export const updateNotes = async (id, updatedNote) => {
   });
   return response.json();
 };
+
+export default {
+  getAllNotes,
+  createNotes,
+  deleteNotes,
+  updateNotes,
+}
