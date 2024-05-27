@@ -6,12 +6,12 @@ export const Note = ({ note }) => {
       <ul>
         <li className='noteItem'>
           <div className='noteContent'>
-            <div className="noteColumns">
+            <div>
               <p>Name: {note.name}</p>
               <p>Description: {note.description}</p>
               <p>Important: {note.important.toString()}</p>
             </div>
-            <div className="noteColumns">
+            <div>
               <p>Status: {note.status}</p>
               <p>Due Date: {note.due_date}</p>
               <p>Created At: {new Date(note.created_at).toLocaleString()}</p>

@@ -1,17 +1,9 @@
 import { NotesList, CreateNoteForm } from "./components";  
-import notesService from './services/notes/notesService';
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useNotes } from './hooks/useNotes';
 
 const App = () => {
-  const [notes, setNotes] = useState([]);
-
-  useEffect(() => {
-    notesService.getAllNotes().then((data) => {
-        console.log(data.notes)
-        setNotes(data.notes);
-    })
-  }, []);
+  const notes = useNotes();
 
   return (
     <table className="notesTable">
