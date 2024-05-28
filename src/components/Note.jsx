@@ -1,6 +1,6 @@
 import { DeleteNoteForm, UpdateNoteForm } from './index';
 
-export const Note = ({ note }) => {
+export const Note = ({ note, setNotes }) => {
   return (
     
       <div className='noteItem'>
@@ -11,8 +11,8 @@ export const Note = ({ note }) => {
         <p>Due Date: {note.due_date}</p>
         <p>Created At: {new Date(note.created_at).toLocaleString()}</p>
         <div className='noteButtons'>
-          <UpdateNoteForm key={`update-${note.id}`}/>
-          <DeleteNoteForm key={`delete-${note.id}`} id={note.id}/>
+          <UpdateNoteForm />
+          <DeleteNoteForm id={note.id} setNotes={setNotes} />
         </div>
       </div>
   );

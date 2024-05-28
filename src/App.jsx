@@ -3,12 +3,12 @@ import './App.css';
 import { useNotes } from './hooks/useNotes';
 
 const App = () => {
-  const { notes } = useNotes();
+  const { notes, setNotes } = useNotes();
 
   return (
     <table className="notesTable">
       <h2 className="headerTitle">NOTES</h2>
-      <NotesList notes={notes} />
+      <NotesList notes={notes} setNotes={setNotes} />
     </table>
   );
 };
