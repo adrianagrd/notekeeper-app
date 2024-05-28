@@ -1,5 +1,5 @@
-export { CreateNoteForm } from './ButtonCreateNote';
-export { DeleteNoteForm } from './ButtonDeleteNote';
-export { UpdateNoteForm } from './ButtonUpdateNote';
+export { CreateNoteForm } from './CreateNoteForm';
+export { DeleteNoteForm } from './DeleteNoteForm';
+export { UpdateNoteForm } from './UpdateNoteForm';
 export { Note } from './Note';
 export { NotesList } from './NotesList';

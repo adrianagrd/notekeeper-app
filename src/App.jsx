@@ -3,15 +3,18 @@ import './App.css';
 import { useNotes } from './hooks/useNotes';
 
 const App = () => {
-  const notes = useNotes();
+  const { notes } = useNotes();
 
   return (
-    <table className="notesTable">
-      <h2 className="headerTitle">NOTES</h2>
-      <CreateNoteForm />
-      <hr />
+    <>
+      <div className="headerTitle">
+        <h2>NOTES</h2>
+        <CreateNoteForm />
+      </div>
+      <main className="main">
       <NotesList notes={notes} />
-    </table>
+    </main>
+    </>
   );
 };
 

@@ -1,7 +1,6 @@
-import notesService from '../services/notes/notesService';
+import notesService from "../services/notes/notesService";
 
 export const DeleteNoteForm = ({ id }) => {
-
     const handleDeleteNote = () => {
         if (confirm(`Are you sure about deleting the note ?`)) {
           notesService.deleteNotes(id);
