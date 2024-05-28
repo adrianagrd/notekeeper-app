@@ -10,5 +10,5 @@ export const useNotes = () => {
     })
   }, []);
 
-  return notes;
+  return {notes, setNotes};
 };

@@ -2,9 +2,10 @@ import notesService from '../services/notes/notesService';
 
 export const DeleteNoteForm = ({ id }) => {
 
-    const handleDeleteNote = () => {
+    const handleDeleteNote = async () => {
         if (confirm(`Are you sure about deleting the note ?`)) {
-          notesService.deleteNotes(id);
+          await notesService.deleteNotes(id);
+          await notesService.getAllNotes();
         }
     }
 
