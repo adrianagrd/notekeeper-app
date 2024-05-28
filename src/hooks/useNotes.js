@@ -14,5 +14,5 @@ export const useNotes = () => {
     })
   }, []);
 
-  return {notes};
+  return {notes, handleUpdateNote};
 };
