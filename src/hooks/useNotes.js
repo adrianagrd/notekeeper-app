@@ -4,11 +4,15 @@ import notesService from '../services/notes/notesService';
 export const useNotes = () => {
   const [notes, setNotes] = useState([]);
 
+  const handleUpdateNote = (newNotes) => {
+    setNotes(newNotes);
+  }
+
   useEffect(() => {
     notesService.getAllNotes().then((data) => {
-        setNotes(data.notes);
+        handleUpdateNote(data.notes);
     })
   }, []);
 
-  return {notes, setNotes};
+  return {notes};
 };
