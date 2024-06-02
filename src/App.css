@@ -1,3 +1,8 @@
+.App {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
 *{
     margin: 0;
@@ -15,36 +20,39 @@
 .headerTitle{
     flex-direction: column;
     display: flex;
-    margin: 20px auto;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    margin: 20px 30px;
+    width: 83%;
     border-bottom: 1px solid #333;
 }
 
+.headerCreateNote{
+    flex-direction: column;
+    display: flex;
+    margin: 20px auto;
+    width: 90%;
+    border-bottom: 1px solid #333;
+}
 
 .tbody {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 60vw;
-    margin: auto;
+    width: 50vw;
+    margin: auto 20px ;
 }
 
 .noteItem {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 40%;
     margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .deleteNote,
-.updateNote,
-.createNote { 
+.updateNote { 
     width: 40%;
     height: 30px;
     border-radius: 3px;
@@ -54,4 +62,31 @@
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 10px 10px 0px 15px;
+}
+
+.createNote {
+    width: 91%;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #5D432C;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 10px 0px 26px;
+
+}
+
+.listNotes {
+    width: 50%;
+}
+
+.formNotes{
+    width: 50%;
+}
+
+.notes-container{
+    margin: 10px 30px;
+    gap: 10px;
+    display: flex;
+    width: 80%;
 }
