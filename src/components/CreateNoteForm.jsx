@@ -1,38 +1,52 @@
-import notesService from "../services/notes/notesService";
+import notesService from '../services/notes/notesService';
 
-export const CreateNoteForm = ({ id, handleUpdateNote }) => {
-    const handleCreateNote = (event, id) => {
+export const CreateNoteForm = ({ handleUpdateNote }) => {
+    const handleCreateNote = (event) => {
         event.preventDefault();
-        notesService.createNotes(id)
-        .then(() => notesService.getAllNotes())
-        .then(({ notes }) => {
-            handleUpdateNote(notes)
-        });    
-    }
-    
-    return (
-        <div className="form-container">
-            <form onSubmit={handleCreateNote} >
-                <div className="notes-container">
-                    <input type="text" name="name" placeholder="Enter name" required />
-                    <input type="text" name="description" placeholder="Enter description" required />
-                    <input type="checkbox" name="important" /> Important
+        const newNote = {
+            name: event.target.name.value,
+            description: event.target.description.value,
+            important: event.target.important.checked,
+            status: event.target.status.value,
+            dueDate: event.target.dueDate.value,
+        };
 
-                </div>
-                <div className="notes-container">                
-                    <select className="status-label" name="status">
-                        <option value="pending">Pending</option>
-                        <option value="inProgress">In Progress</option>
-                        <option value="completed">Completed</option>
-                    </select>
-                    <input className="status-label" type="date" name="dueDate" required />
-                </div>
-                <span>
-                    <button type="submit" className="createNote" onClick={() => handleCreateNote(id)}>
-                        <b>Create</b>
-                    </button>
-                </span>
-            </form>
-        </div>
+        notesService
+            .createNotes(newNote)
+            .then(() => notesService.getAllNotes())
+            .then(({ notes }) => {
+                handleUpdateNote(notes);
+            });
+    };
+
+    return (
+        <form onSubmit={handleCreateNote}>
+            <div className="notes-container">
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter name"
+                    required
+                />
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Enter description"
+                    required
+                />
+                <input type="checkbox" name="important" /> Important
+            </div>
+            <div className="notes-container">
+                <select name="status">
+                    <option value="pending">Pending</option>
+                    <option value="inProgress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <input type="date" name="dueDate" required />
+            </div>
+            <button type="submit" className="createNote">
+                <b>Create</b>
+            </button>
+        </form>
     );
-}
+};
