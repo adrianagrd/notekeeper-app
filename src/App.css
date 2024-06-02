@@ -33,6 +33,14 @@
     border-bottom: 1px solid #333;
 }
 
+.headerUpdateNote{
+    flex-direction: column;
+    display: flex;
+    margin: 20px 30px;
+    width: 90%;
+    border-bottom: 1px solid #333;
+}
+
 .tbody {
     display: flex;
     align-items: center;
@@ -81,7 +89,7 @@
 }
 
 .formNotes{
-    width: 50%;
+    width: 100%;
 }
 
 .notes-container{
@@ -93,4 +101,9 @@
 
 .status-label {
     width: 34%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
 }

@@ -11,7 +11,7 @@ export const Note = ({ note, handleUpdateNote }) => {
         <p>Due Date: {note.due_date}</p>
         <p>Created At: {new Date(note.created_at).toLocaleString()}</p>
         <div className='noteButtons'>
-          <UpdateNoteForm />
+          <UpdateNoteForm id={note.id} />
           <DeleteNoteForm id={note.id} handleUpdateNote={handleUpdateNote} />
         </div>
       </div>

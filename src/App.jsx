@@ -1,4 +1,4 @@
-import { NotesList } from "./components";  
+import { NotesList, UpdateNoteForm } from "./components";  
 import { CreateNoteForm } from "./components/CreateNoteForm";
 import './App.css';
 import { useNotes } from './hooks/useNotes';
@@ -15,6 +15,10 @@ const App = () => {
   <div className="formNotes">
     <h2 className="headerCreateNote">CREATE NOTE FORM</h2>
     <CreateNoteForm handleUpdateNote={handleUpdateNote} />
+    <div className="formNotes">
+      <h2 className="headerUpdateNote">UPDATE NOTE FORM</h2>
+      <UpdateNoteForm handleUpdateNote={handleUpdateNote} />
+    </div>
   </div>
 </div>
   );
