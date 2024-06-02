@@ -90,3 +90,7 @@
     display: flex;
     width: 80%;
 }
+
+.status-label {
+    width: 34%;
+}

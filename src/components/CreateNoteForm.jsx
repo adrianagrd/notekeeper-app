@@ -19,12 +19,12 @@ export const CreateNoteForm = ({ id, handleUpdateNote }) => {
 
             </div>
             <div className="notes-container">                
-                <select name="status">
+                <select className="status-label" name="status">
                     <option value="pending">Pending</option>
                     <option value="inProgress">In Progress</option>
                     <option value="completed">Completed</option>
                 </select>
-                <input type="date" name="dueDate" required />
+                <input className="status-label" type="date" name="dueDate" required />
             </div>
             <span>
                 <button type="submit" className="createNote" onClick={() => handleCreateNote(id)}>
