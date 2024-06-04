@@ -1,6 +1,8 @@
-const { VITE_API_URL: BASE_URL } = import.meta.env;
+const BASE_URL = import.meta.env.VITE_API_URL;
 const resourcePath = 'notes';
 const urlToFetch = `${BASE_URL}/${resourcePath}`;
+
+console.log(import.meta.env.VITE_API_URL);
 
 const getAllNotes = async () => {
     const response = await globalThis.fetch(urlToFetch);

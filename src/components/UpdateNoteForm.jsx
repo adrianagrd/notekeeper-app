@@ -1,4 +1,4 @@
-import notesService from '../services/notes/notesService';
+import notesService from '../services/notesService';
 
 export const UpdateNoteForm = ({
     handleUpdateNote,
@@ -22,7 +22,6 @@ export const UpdateNoteForm = ({
                 handlesetEditNote('');
             });
     };
-    console.log(notetoEdit);
     return (
         <form onSubmit={handleUpdateNotes}>
             <div className="notes-container">
