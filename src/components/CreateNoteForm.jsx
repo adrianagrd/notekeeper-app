@@ -1,4 +1,4 @@
-import notesService from '../services/notes/notesService';
+import notesService from '../services/notesService';
 
 export const CreateNoteForm = ({ handleUpdateNote }) => {
     const handleCreateNote = (event) => {
