@@ -10,7 +10,6 @@ export const UpdateNoteForm = ({
 
     const handleUpdateNotes = (event, id) => {
         event.preventDefault();
-        console.log(id);
 
         notesService
             .updateNotes(id)
@@ -22,6 +21,11 @@ export const UpdateNoteForm = ({
                 handlesetEditNote('');
             });
     };
+
+    if (!editNote) {
+        return null;
+    }
+
     return (
         <form onSubmit={handleUpdateNotes}>
             <div className="notes-container">

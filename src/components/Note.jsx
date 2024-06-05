@@ -1,6 +1,13 @@
-import { DeleteNoteForm } from './index';
+import { DeleteNoteForm, UpdateNoteForm } from './index';
+import { useState } from 'react';
 
 export const Note = ({ note, handleUpdateNote, handlesetEditNote }) => {
+    const [showUpdateForm, setShowUpdateForm] = useState(false);
+
+    const handleUpdateClick = (id) => {
+        handlesetEditNote(id);
+        setShowUpdateForm(true);
+    };
     return (
         <div className="noteItem">
             <p>Name: {note.name}</p>
@@ -13,10 +20,16 @@ export const Note = ({ note, handleUpdateNote, handlesetEditNote }) => {
                 <button
                     className="updateNote"
                     id={note.id}
-                    onClick={() => handlesetEditNote(note.id)}
+                    onClick={() => handleUpdateClick(note.id)}
                 >
                     Update
                 </button>
+                {showUpdateForm && (
+                    <UpdateNoteForm
+                        id={note.id}
+                        handleUpdateNote={handleUpdateNote}
+                    />
+                )}
                 <DeleteNoteForm
                     id={note.id}
                     handleUpdateNote={handleUpdateNote}
