@@ -1,7 +1,6 @@
 import { NotesList, UpdateNoteForm } from './components';
 import { CreateNoteForm } from './components/CreateNoteForm';
 import { useNotes, useEditNote } from './hooks';
-
 import './App.css';
 
 const App = () => {

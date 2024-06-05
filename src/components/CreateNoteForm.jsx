@@ -1,4 +1,5 @@
 import notesService from '../services/notesService';
+import { ButtonCreateNote } from './ButtonCreateNote';
 
 export const CreateNoteForm = ({ handleUpdateNote }) => {
     const handleCreateNote = (event) => {
@@ -44,9 +45,7 @@ export const CreateNoteForm = ({ handleUpdateNote }) => {
                 </select>
                 <input type="date" name="due_date" required />
             </div>
-            <button type="submit" className="createNote">
-                <b>CREATE</b>
-            </button>
+            <ButtonCreateNote className="createNote" />
         </form>
     );
 };

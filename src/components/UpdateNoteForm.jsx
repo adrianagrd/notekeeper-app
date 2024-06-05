@@ -21,8 +21,6 @@ export const UpdateNoteForm = ({
         });
     };
 
-    console.log(updatedNote);
-
     const handleUpdateNotes = (event, id) => {
         event.preventDefault();
         notesService
@@ -35,6 +33,10 @@ export const UpdateNoteForm = ({
                 handleSetEditNote('');
             });
     };
+
+    if (!editNote) {
+        return null;
+    }
 
     return (
         <form onSubmit={handleUpdateNotes}>
@@ -82,15 +84,13 @@ export const UpdateNoteForm = ({
                     onChange={handleInputChange}
                 />
             </div>
-            <span>
-                <button
-                    type="submit"
-                    className="updateNoteButton"
-                    onClick={(event) => handleUpdateNotes(event, editNote)}
-                >
-                    <b>UPDATE</b>
-                </button>
-            </span>
+            <button
+                type="submit"
+                className="updateNoteButton"
+                onClick={(event) => handleUpdateNotes(event, editNote)}
+            >
+                <b>UPDATE</b>
+            </button>
         </form>
     );
 };
