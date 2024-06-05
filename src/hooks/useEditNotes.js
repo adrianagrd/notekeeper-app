@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import notesService from '../services/notesService';
+import { useState } from 'react';
 
 export const useEditNote = () => {
     const [editNote, setEditNote] = useState('');
@@ -7,12 +6,6 @@ export const useEditNote = () => {
     const handleSetEditNote = (id) => {
         setEditNote(id);
     };
-
-    useEffect(() => {
-        notesService.getAllNotes().then((data) => {
-            handleSetEditNote(data.notes);
-        });
-    }, []);
 
     return { editNote, handleSetEditNote };
 };
