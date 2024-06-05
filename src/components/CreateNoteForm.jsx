@@ -8,7 +8,7 @@ export const CreateNoteForm = ({ handleUpdateNote }) => {
             description: event.target.description.value,
             important: event.target.important.checked,
             status: event.target.status.value,
-            dueDate: event.target.dueDate.value,
+            due_date: event.target.due_date.value,
         };
 
         notesService
@@ -42,7 +42,7 @@ export const CreateNoteForm = ({ handleUpdateNote }) => {
                     <option value="inProgress">In Progress</option>
                     <option value="completed">Completed</option>
                 </select>
-                <input type="date" name="dueDate" required />
+                <input type="date" name="due_date" required />
             </div>
             <button type="submit" className="createNote">
                 <b>Create</b>

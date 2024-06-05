@@ -70,13 +70,13 @@ export const UpdateNoteForm = ({
                     onChange={handleInputChange}
                 >
                     <option value="pending">Pending</option>
-                    <option value="inProgress">In Progress</option>
+                    <option value="in-progress">In Progress</option>
                     <option value="completed">Completed</option>
                 </select>
 
                 <input
                     type="date"
-                    name="dueDate"
+                    name="due_date"
                     required
                     value={updatedNote.due_date || ''}
                     onChange={handleInputChange}
