@@ -15,7 +15,7 @@ export const Note = ({ note, handleUpdateNote, handleSetEditNote }) => {
                     id={note.id}
                     onClick={() => handleSetEditNote(note.id)}
                 >
-                    Update
+                    <b>UPDATE</b>
                 </button>
                 <DeleteNoteForm
                     id={note.id}

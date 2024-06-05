@@ -4,41 +4,44 @@
     width: 100%;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.main{
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
 }
 
-.headerTitle{
+.headerTitle {
     flex-direction: column;
     display: flex;
     margin: 20px 30px;
     width: 83%;
     border-bottom: 1px solid #333;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.headerCreateNote{
+.headerCreateNote {
     flex-direction: column;
     display: flex;
     margin: 20px auto;
     width: 90%;
     border-bottom: 1px solid #333;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.headerUpdateNote{
+.headerUpdateNote {
     flex-direction: column;
     display: flex;
     margin: 20px 30px;
     width: 90%;
     border-bottom: 1px solid #333;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .tbody {
@@ -46,7 +49,7 @@
     align-items: center;
     flex-wrap: wrap;
     width: 50vw;
-    margin: auto 20px ;
+    margin: auto 20px;
 }
 
 .noteItem {
@@ -60,39 +63,56 @@
 }
 
 .deleteNote,
-.updateNote { 
-    width: 40%;
+.updateNote {
+    width: 50%;
     height: 30px;
     border-radius: 3px;
-    background-color: #5D432C;
+    background-color: #5d432c;
     color: #fff;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin: 10px 10px 0px 15px;
+    margin: 10px 10px 0px 0px;
 }
 
 .createNote {
     width: 91%;
-    height: 30px;
+    height: 35px;
     border-radius: 3px;
-    background-color: #5D432C;
+    background-color: #5d432c;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 10px 10px 0px 26px;
+    font-family: 'Courier New', Courier, monospace;
+}
 
+.updateNoteButton {
+    width: 91%;
+    height: 35px;
+    border-radius: 3px;
+    background-color: #5d432c;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 10px 0px 26px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.noteButtons {
+    display: flex;
 }
 
 .listNotes {
     width: 50%;
 }
 
-.formNotes{
+.formNotes {
     width: 100%;
 }
 
-.notes-container{
+.notes-container {
     margin: 10px 30px;
     gap: 10px;
     display: flex;

@@ -45,7 +45,7 @@ export const CreateNoteForm = ({ handleUpdateNote }) => {
                 <input type="date" name="due_date" required />
             </div>
             <button type="submit" className="createNote">
-                <b>Create</b>
+                <b>CREATE</b>
             </button>
         </form>
     );

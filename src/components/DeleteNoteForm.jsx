@@ -13,14 +13,12 @@ export const DeleteNoteForm = ({ id, handleUpdateNote }) => {
     };
 
     return (
-        <span>
-            <button
-                type="submit"
-                className="deleteNote"
-                onClick={() => handleDeleteNote(id)}
-            >
-                <b>Delete</b>
-            </button>
-        </span>
+        <button
+            type="submit"
+            className="deleteNote"
+            onClick={() => handleDeleteNote(id)}
+        >
+            <b>DELETE</b>
+        </button>
     );
 };

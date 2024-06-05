@@ -85,10 +85,10 @@ export const UpdateNoteForm = ({
             <span>
                 <button
                     type="submit"
-                    className="updateNote"
+                    className="updateNoteButton"
                     onClick={(event) => handleUpdateNotes(event, editNote)}
                 >
-                    <b>Update</b>
+                    <b>UPDATE</b>
                 </button>
             </span>
         </form>
