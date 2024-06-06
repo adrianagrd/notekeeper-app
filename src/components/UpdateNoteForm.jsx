@@ -1,5 +1,6 @@
 import notesService from '../services/notesService';
 import { useState, useEffect } from 'react';
+import { ButtonUpdateNote } from './ButtonUpdateNote';
 
 export const UpdateNoteForm = ({
     handleUpdateNote,
@@ -84,13 +85,10 @@ export const UpdateNoteForm = ({
                     onChange={handleInputChange}
                 />
             </div>
-            <button
-                type="submit"
-                className="updateNoteButton"
-                onClick={(event) => handleUpdateNotes(event, editNote)}
-            >
-                <b>UPDATE</b>
-            </button>
+            <ButtonUpdateNote
+                handleUpdateNotes={handleUpdateNotes}
+                editNote={editNote}
+            />
         </form>
     );
 };
