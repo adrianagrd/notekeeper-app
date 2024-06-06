@@ -3,7 +3,7 @@ import { handleCreateNote } from '../helpers/handlers';
 
 export const CreateNoteForm = ({ handleUpdateNote }) => {
     return (
-        <form onSubmit={() => handleCreateNote(handleUpdateNote)}>
+        <form onSubmit={() => handleCreateNote(event, handleUpdateNote)}>
             <div className="notes-container">
                 <input
                     type="text"
