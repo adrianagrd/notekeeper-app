@@ -15,5 +15,6 @@ export const handleCreateNote = (event, handleUpdateNote) => {
         .then(() => notesService.getAllNotes())
         .then(({ notes }) => {
             handleUpdateNote(notes);
+            event.target.reset();
         });
 };
