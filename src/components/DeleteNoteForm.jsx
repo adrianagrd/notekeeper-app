@@ -1,4 +1,5 @@
 import notesService from '../services/notesService';
+import { ButtonDeleteNote } from './ButtonDeleteNote';
 
 export const DeleteNoteForm = ({ id, handleUpdateNote }) => {
     const handleDeleteNote = (id) => {
@@ -13,14 +14,10 @@ export const DeleteNoteForm = ({ id, handleUpdateNote }) => {
     };
 
     return (
-        <span>
-            <button
-                type="submit"
-                className="deleteNote"
-                onClick={() => handleDeleteNote(id)}
-            >
-                <b>Delete</b>
-            </button>
-        </span>
+        <ButtonDeleteNote
+            id={id}
+            handleUpdateNote={handleUpdateNote}
+            handleDeleteNote={handleDeleteNote}
+        />
     );
 };

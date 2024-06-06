@@ -1,8 +1,9 @@
-export const validateNonEmpty = (note, stringProperties) => {
-  for (let key of stringProperties) {
-    if (!note[key] || note[key].trim() === '') {
-      return false;
-    }
-  }
-  return true;
-}
+export const validateNonEmpty = (note) => {
+    const values = Object.values(note).filter(
+        (value) => typeof value === 'string'
+    );
+
+    const isFilled = values.every((value) => value !== '');
+
+    return isFilled;
+};

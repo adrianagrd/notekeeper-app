@@ -1,6 +1,6 @@
 import { Note } from './Note';
 
-export const NotesList = ({ notes, handleUpdateNote, handlesetEditNote }) => {
+export const NotesList = ({ notes, handleUpdateNote, handleSetEditNote }) => {
     return (
         <>
             <div className="tbody">
@@ -9,7 +9,7 @@ export const NotesList = ({ notes, handleUpdateNote, handlesetEditNote }) => {
                         key={note.id}
                         note={note}
                         handleUpdateNote={handleUpdateNote}
-                        handlesetEditNote={handlesetEditNote}
+                        handleSetEditNote={handleSetEditNote}
                     />
                 ))}
             </div>

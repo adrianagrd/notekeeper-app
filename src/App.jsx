@@ -1,17 +1,11 @@
 import { NotesList, UpdateNoteForm } from './components';
 import { CreateNoteForm } from './components/CreateNoteForm';
-import { useNotes } from './hooks/useNotes';
-import { useState } from 'react';
-
+import { useNotes, useEditNote } from './hooks';
 import './App.css';
 
 const App = () => {
     const { notes, handleUpdateNote } = useNotes();
-    const [editNote, setEditNote] = useState('');
-
-    const handlesetEditNote = (id) => {
-        setEditNote(id);
-    };
+    const { editNote, handleSetEditNote } = useEditNote();
 
     return (
         <div className="App">
@@ -20,7 +14,7 @@ const App = () => {
                 <NotesList
                     notes={notes}
                     handleUpdateNote={handleUpdateNote}
-                    handlesetEditNote={handlesetEditNote}
+                    handleSetEditNote={handleSetEditNote}
                 />
             </div>
             <div className="formNotes">
@@ -30,7 +24,7 @@ const App = () => {
                 <UpdateNoteForm
                     handleUpdateNote={handleUpdateNote}
                     editNote={editNote}
-                    handlesetEditNote={handlesetEditNote}
+                    handleSetEditNote={handleSetEditNote}
                     notes={notes}
                 />
             </div>

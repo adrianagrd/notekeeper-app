@@ -1,26 +1,9 @@
-import notesService from '../services/notesService';
+import { ButtonCreateNote } from './ButtonCreateNote';
+import { handleCreateNote } from '../helpers/handlers';
 
 export const CreateNoteForm = ({ handleUpdateNote }) => {
-    const handleCreateNote = (event) => {
-        event.preventDefault();
-        const newNote = {
-            name: event.target.name.value,
-            description: event.target.description.value,
-            important: event.target.important.checked,
-            status: event.target.status.value,
-            dueDate: event.target.dueDate.value,
-        };
-
-        notesService
-            .createNotes(newNote)
-            .then(() => notesService.getAllNotes())
-            .then(({ notes }) => {
-                handleUpdateNote(notes);
-            });
-    };
-
     return (
-        <form onSubmit={handleCreateNote}>
+        <form onSubmit={() => handleCreateNote(event, handleUpdateNote)}>
             <div className="notes-container">
                 <input
                     type="text"
@@ -42,11 +25,9 @@ export const CreateNoteForm = ({ handleUpdateNote }) => {
                     <option value="inProgress">In Progress</option>
                     <option value="completed">Completed</option>
                 </select>
-                <input type="date" name="dueDate" required />
+                <input type="date" name="due_date" required />
             </div>
-            <button type="submit" className="createNote">
-                <b>Create</b>
-            </button>
+            <ButtonCreateNote className="createNote" />
         </form>
     );
 };

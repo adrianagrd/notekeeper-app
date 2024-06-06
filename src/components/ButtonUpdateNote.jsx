@@ -1,21 +1,11 @@
-import notesService from '../services/notes/notesService';
-
-export const UpdateNoteForm = () => {
-    const handleUpdateNote = () => {
-        if (confirm(`Are you sure about updating the note ?`)) {
-            notesService.updateNotes();
-        }
-    };
-
+export const ButtonUpdateNote = ({ handleUpdateNotes, editNote }) => {
     return (
-        <span>
-            <button
-                type="submit"
-                className="updateNote"
-                onClick={handleUpdateNote}
-            >
-                <b>Update Note</b>
-            </button>
-        </span>
+        <button
+            type="submit"
+            className="updateNoteButton"
+            onClick={(event) => handleUpdateNotes(event, editNote)}
+        >
+            <b>UPDATE</b>
+        </button>
     );
 };
