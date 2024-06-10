@@ -1,12 +1,10 @@
-import { STATUS } from '../../data';
-
 export const validateEnum = (note) => {
     const noteStatus = note.status;
 
     if (
-        noteStatus !== STATUS.PENDING &&
-        noteStatus !== STATUS.IN_PROGRESS &&
-        noteStatus !== STATUS.DONE
+        noteStatus !== 'completed' &&
+        noteStatus !== 'in progress' &&
+        noteStatus !== 'pending'
     )
         return false;
 
